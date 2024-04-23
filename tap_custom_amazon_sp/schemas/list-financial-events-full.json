@@ -1,0 +1,555 @@
+{
+    "type": "object",
+    "properties": {
+        "ShipmentEventList": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "AmazonOrderId": {
+                        "type": "string"
+                    },
+                    "SellerOrderId": {
+                        "type": "string"
+                    },
+                    "MarketplaceName": {
+                        "type": "string"
+                    },
+                    "PostedDate": {
+                        "type": "string"
+                    },
+                    "ShipmentItemList": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "SellerSKU": {
+                                    "type": "string"
+                                },
+                                "OrderItemId": {
+                                    "type": "string"
+                                },
+                                "QuantityShipped": {
+                                    "type": "number"
+                                },
+                                "ItemChargeList": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "ChargeType": {
+                                                "type": "string"
+                                            },
+                                            "ChargeAmount": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "CurrencyCode": {
+                                                        "type": "string"
+                                                    },
+                                                    "CurrencyAmount": {
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "ItemFeeList": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "FeeType": {
+                                                "type": "string"
+                                            },
+                                            "FeeAmount": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "CurrencyCode": {
+                                                        "type": "string"
+                                                    },
+                                                    "CurrencyAmount": {
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "ItemTaxWithheldList": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "TaxCollectionModel": {
+                                                "type": "string"
+                                            },
+                                            "TaxesWithheld": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "ChargeType": {
+                                                            "type": "string"
+                                                        },
+                                                        "ChargeAmount": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "CurrencyCode": {
+                                                                    "type": "string"
+                                                                },
+                                                                "CurrencyAmount": {
+                                                                    "type": "number"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "PromotionList": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "PromotionType": {
+                                                "type": "string"
+                                            },
+                                            "PromotionId": {
+                                                "type": "string"
+                                            },
+                                            "PromotionAmount": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "CurrencyCode": {
+                                                        "type": "string"
+                                                    },
+                                                    "CurrencyAmount": {
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ShipmentSettleEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "RefundEventList": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "AmazonOrderId": {
+                        "type": "string"
+                    },
+                    "SellerOrderId": {
+                        "type": "string"
+                    },
+                    "MarketplaceName": {
+                        "type": "string"
+                    },
+                    "PostedDate": {
+                        "type": "string"
+                    },
+                    "ShipmentItemAdjustmentList": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "SellerSKU": {
+                                    "type": "string"
+                                },
+                                "OrderAdjustmentItemId": {
+                                    "type": "string"
+                                },
+                                "QuantityShipped": {
+                                    "type": "number"
+                                },
+                                "ItemChargeAdjustmentList": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "ChargeType": {
+                                                "type": "string"
+                                            },
+                                            "ChargeAmount": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "CurrencyCode": {
+                                                        "type": "string"
+                                                    },
+                                                    "CurrencyAmount": {
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "ItemFeeAdjustmentList": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "FeeType": {
+                                                "type": "string"
+                                            },
+                                            "FeeAmount": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "CurrencyCode": {
+                                                        "type": "string"
+                                                    },
+                                                    "CurrencyAmount": {
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "ItemTaxWithheldList": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "TaxCollectionModel": {
+                                                "type": "string"
+                                            },
+                                            "TaxesWithheld": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "ChargeType": {
+                                                            "type": "string"
+                                                        },
+                                                        "ChargeAmount": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "CurrencyCode": {
+                                                                    "type": "string"
+                                                                },
+                                                                "CurrencyAmount": {
+                                                                    "type": "number"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "PromotionAdjustmentList": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "PromotionType": {
+                                                "type": "string"
+                                            },
+                                            "PromotionId": {
+                                                "type": "string"
+                                            },
+                                            "PromotionAmount": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "CurrencyCode": {
+                                                        "type": "string"
+                                                    },
+                                                    "CurrencyAmount": {
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "GuaranteeClaimEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "ChargebackEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "PayWithAmazonEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "ServiceProviderCreditEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "RetrochargeEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "RentalTransactionEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "PerformanceBondRefundEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "ProductAdsPaymentEventList": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "postedDate": {
+                        "type": "string"
+                    },
+                    "transactionType": {
+                        "type": "string"
+                    },
+                    "invoiceId": {
+                        "type": "string"
+                    },
+                    "baseValue": {
+                        "type": "object",
+                        "properties": {
+                            "CurrencyCode": {
+                                "type": "string"
+                            },
+                            "CurrencyAmount": {
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "taxValue": {
+                        "type": "object",
+                        "properties": {
+                            "CurrencyCode": {
+                                "type": "string"
+                            },
+                            "CurrencyAmount": {
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "transactionValue": {
+                        "type": "object",
+                        "properties": {
+                            "CurrencyCode": {
+                                "type": "string"
+                            },
+                            "CurrencyAmount": {
+                                "type": "number"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ServiceFeeEventList": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "AmazonOrderId": {
+                        "type": "string"
+                    },
+                    "FeeReason": {
+                        "type": "string"
+                    },
+                    "SellerSKU": {
+                        "type": "string"
+                    },
+                    "FeeDescription": {
+                        "type": "string"
+                    },
+                    "FeeList": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "FeeType": {
+                                    "type": "string"
+                                },
+                                "FeeAmount": {
+                                    "type": "object",
+                                    "properties": {
+                                        "CurrencyCode": {
+                                            "type": "string"
+                                        },
+                                        "CurrencyAmount": {
+                                            "type": "number"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "SellerDealPaymentEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "DebtRecoveryEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "LoanServicingEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "AdjustmentEventList": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "AdjustmentType": {
+                        "type": "string"
+                    },
+                    "PostedDate": {
+                        "type": "string"
+                    },
+                    "AdjustmentAmount": {
+                        "type": "object",
+                        "properties": {
+                            "CurrencyCode": {
+                                "type": "string"
+                            },
+                            "CurrencyAmount": {
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "AdjustmentItemList": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "Quantity": {
+                                    "type": "string"
+                                },
+                                "PerUnitAmount": {
+                                    "type": "object",
+                                    "properties": {
+                                        "CurrencyCode": {
+                                            "type": "string"
+                                        },
+                                        "CurrencyAmount": {
+                                            "type": "number"
+                                        }
+                                    }
+                                },
+                                "TotalAmount": {
+                                    "type": "object",
+                                    "properties": {
+                                        "CurrencyCode": {
+                                            "type": "string"
+                                        },
+                                        "CurrencyAmount": {
+                                            "type": "number"
+                                        }
+                                    }
+                                },
+                                "SellerSKU": {
+                                    "type": "string"
+                                },
+                                "ProductDescription": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "SAFETReimbursementEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "SellerReviewEnrollmentPaymentEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "FBALiquidationEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "CouponPaymentEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "ImagingServicesFeeEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "NetworkComminglingTransactionEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "AffordabilityExpenseEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "AffordabilityExpenseReversalEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "RemovalShipmentEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "RemovalShipmentAdjustmentEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "TrialShipmentEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "TDSReimbursementEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "AdhocDisbursementEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "TaxWithholdingEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "ChargeRefundEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "FailedAdhocDisbursementEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "ValueAddedServiceChargeEventList": {
+            "type": "array",
+            "items": {}
+        },
+        "CapacityReservationBillingEventList": {
+            "type": "array",
+            "items": {}
+        }
+    }
+}

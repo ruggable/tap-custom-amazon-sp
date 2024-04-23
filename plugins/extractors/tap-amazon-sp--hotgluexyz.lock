@@ -1,0 +1,131 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-amazon-sp",
+  "namespace": "tap_amazon_seller",
+  "variant": "hotgluexyz",
+  "label": "Amazon Selling Partner (SP)",
+  "docs": "https://hub.meltano.com/extractors/tap-amazon-sp--hotgluexyz",
+  "repo": "https://gitlab.com/hotglue/tap-amazon-seller",
+  "pip_url": "git+https://gitlab.com/hotglue/tap-amazon-seller.git",
+  "executable": "tap-amazon-seller",
+  "description": "Amazon selling partners programmatic access to their Amazon Seller Central account data",
+  "logo_url": "https://hub.meltano.com/assets/logos/extractors/amazon-sp.png",
+  "capabilities": [
+    "about",
+    "catalog",
+    "discover",
+    "schema-flattening",
+    "state",
+    "stream-maps"
+  ],
+  "settings_group_validation": [
+    [
+      "aws_access_key",
+      "aws_secret_key",
+      "client_secret",
+      "lwa_client_id",
+      "refresh_token",
+      "role_arn"
+    ]
+  ],
+  "settings": [
+    {
+      "name": "aws_access_key",
+      "kind": "password",
+      "label": "AWS Access Key",
+      "description": "Your AWS access key.",
+      "sensitive": true
+    },
+    {
+      "name": "aws_secret_key",
+      "kind": "password",
+      "label": "AWS Secret Key",
+      "description": "Your AWS secret key.",
+      "sensitive": true
+    },
+    {
+      "name": "client_secret",
+      "kind": "password",
+      "label": "Client Secret",
+      "description": "Your AWS client secret.",
+      "sensitive": true
+    },
+    {
+      "name": "flattening_enabled",
+      "kind": "boolean",
+      "label": "Flattening Enabled",
+      "description": "'True' to enable schema flattening and automatically expand nested properties."
+    },
+    {
+      "name": "flattening_max_depth",
+      "kind": "integer",
+      "label": "Flattening Max Depth",
+      "description": "The max depth to flatten schemas."
+    },
+    {
+      "name": "lwa_client_id",
+      "kind": "password",
+      "label": "Lwa Client ID",
+      "description": "Your AWS LWA client ID.",
+      "sensitive": true
+    },
+    {
+      "name": "marketplaces",
+      "kind": "array",
+      "label": "Marketplaces",
+      "description": "An array of Marketplace Country Code values. Default [\"US\"]."
+    },
+    {
+      "name": "processing_status",
+      "kind": "array",
+      "value": [
+        "IN_QUEUE",
+        "IN_PROGRESS"
+      ],
+      "label": "Processing Status",
+      "description": "An array of processing statuses."
+    },
+    {
+      "name": "refresh_token",
+      "kind": "password",
+      "label": "Refresh Token",
+      "description": "Your AWS refresh token.",
+      "sensitive": true
+    },
+    {
+      "name": "report_types",
+      "kind": "array",
+      "value": [
+        "GET_LEDGER_DETAIL_VIEW_DATA",
+        "GET_MERCHANT_LISTINGS_ALL_DATA"
+      ],
+      "label": "Report Types",
+      "description": "An array of report types."
+    },
+    {
+      "name": "role_arn",
+      "kind": "string",
+      "label": "Role Arn",
+      "description": "Your AWS role ARN."
+    },
+    {
+      "name": "sandbox",
+      "kind": "boolean",
+      "value": false,
+      "label": "Sandbox",
+      "description": "Whether to using a sandbox or not."
+    },
+    {
+      "name": "stream_map_config",
+      "kind": "object",
+      "label": "Stream Map Config",
+      "description": "User-defined config values to be used within map expressions."
+    },
+    {
+      "name": "stream_maps",
+      "kind": "object",
+      "label": "Stream Maps",
+      "description": "Config object for stream maps capability."
+    }
+  ]
+}
